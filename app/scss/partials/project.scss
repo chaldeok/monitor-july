@@ -1,3 +1,5 @@
+/* shared styles */
+
 .main-container {
   width: 100%;
   max-width: $max-width;
@@ -51,6 +53,7 @@
   &:before {
     transform: translate(-3px, -3px);
   }
+
   &:hover,
   &:focus {
     &:after,
@@ -58,33 +61,11 @@
       transform: translate(0);
     }
   }
+
   &:active {
     background-color: gainsboro;
   }
 }
-
-/*.sm-btn-basic {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 120px;
-  width: 2vw;
-  height: 40px;
-  border-radius: 22px;
-  border: 2px solid #171717;
-  color: #171717;
-  margin: 30px 0 0;
-  @include adaptive-font(18, 16);
-
-  transition: background-color 0.23s ease-out;
-  &:hover,
-  &:focus {
-    background-color: lighten(#171717, 70%);
-  }
-  &:active {
-    background-color: lighten(#171717, 30%);
-  }
-}*/
 
 /* main styles */
 
@@ -111,7 +92,6 @@
   @include adaptive-font(26, 22);
   font-weight: bold;
   color: gray;
-  //text-align: center;
   text-decoration: none;
 
   &:after {
@@ -138,8 +118,6 @@
   }
 }
 
-.tabs-content {}
-
 .tabs-title {
   font-family: $font-title;
   @include adaptive-font(38, 28);
@@ -156,13 +134,13 @@
 
 .tabs-content__item {
   display: none;
-  //background-color: lightgray;
   padding: 20px 20px 80px 20px;
 }
 
 .tabs-content__item_active {
   display: block;
 }
+
 
 /* items display */
 
@@ -181,15 +159,6 @@
   width: 78%;
   margin: 0 auto;
 }
-
-.product-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  //width: 280px;
-  margin: 0 auto;
-}
-
 .product-item--1 {
   grid-area: item-1;
 }
@@ -211,14 +180,18 @@
 .product-item--7 {
   grid-area: item-7;
 }
-
+.product-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
 .product-name {
   font-family: $font-text;
   font-weight: bold;
   @include adaptive-font(24, 22);
   margin: 20px 0;
 }
-
 .price-old {
   position: relative;
   font-family: $font-text;
@@ -236,7 +209,6 @@
     width: 100%;
   }
 }
-
 .price-new {
   color: red;
   font-family: $font-text;
@@ -255,7 +227,6 @@
   justify-content: center;
   width: 50%;
   margin: 50px auto;
-
 }
 
 .promo-rules {
@@ -300,10 +271,7 @@
 }
 
 
-
-
-
-/* MEDIA */
+/* MEDIA QUERIES */
 
 @media screen and(max-width: 1150px) {
   .items-display {
